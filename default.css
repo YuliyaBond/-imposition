@@ -26,7 +26,6 @@ h1, h2, h3
 p, ol, ul
 {
 	margin-top: 0;
-	
 }
 
 ol, ul
@@ -56,8 +55,8 @@ a:hover
 
 .container
 {
-	/*margin: 0px auto;
-	width: 1200px;*/
+	margin: 0px auto;
+	width: 1200px;
 }
 
 /*********************************************************************************/
@@ -236,7 +235,7 @@ ul.style3 .icon
 /* Social Icon Styles                                                            */
 /*********************************************************************************/
 
-ul.contact
+	ul.contact
 {
 	margin: 0;
 	padding: 2em 0em 0em 0em;
@@ -316,7 +315,8 @@ ul.contact li a.icon-rss:before
 	letter-spacing: 0.20em;
 	text-decoration: none;
 	text-transform: uppercase;
-		color: #FFF;
+	font-weight: 600;
+	color: #FFF;
 }
 
 .button:hover
@@ -339,7 +339,7 @@ ul.contact li a.icon-rss:before
 /* Heading Titles                                                                */
 /*********************************************************************************/
 
-.title
+	.title
 {
 	margin-bottom: 3em;
 }
@@ -360,43 +360,19 @@ ul.contact li a.icon-rss:before
 	color: #6F6F6F;
 }
 
-section
-{
-	display: flex;
-	flex-direction: row;
-	flex: 500px;
-	align-items: center;
-	text-align: center;
-	
-}
-
-article 
-{
-    flex: 1;
-    margin: 10px;
-    background: aqua;
-	text-decoration: none;
-	letter-spacing: 0.10em;
-	text-decoration: none;
-	font-size: 1em;
-	text-transform: uppercase;
-	outline: 0;
-	color: #FFF;
-	display: block;
-	text-align: center;
-}
-
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
 	
-
+.header-wrapper
+{
+	background: #2b2b2b;
+}
 
 .header
 {
-	/*display: flex;*/
+	position: relative;
 	height: 100px;
-	background: #2b2b2b;
 }
 
 /*********************************************************************************/
@@ -405,36 +381,48 @@ article
 
 .logo
 {
-	/*display: flex;**/
+	position: absolute;
+	top: 2em;
+	width: 100%;
+}
+
+.logo h1
+{
+	display: inline-block;
+	font-size: 2.5em;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #ED7070;
-	font-size: 1.2em;
-	text-decoration: none;
-	color: #FFF;
-	top: 1.6em;
+	padding-right: 0.50em;
+	border-right: 1px solid rgba(0,0,0,.1);
 }
 
-.logo:nth-of-type(1) {
-  flex: 3;
+.logo span
+{
+	display: inline-block;
+	padding-right: .50em;
+	letter-spacing: 0.10em;
+	text-transform: uppercase;
+	font-size: 0.90em;
 }
-.logo .logo__a
+
+.logo a
 {
 	text-decoration: none;
 	color: #FFF;
 }
 
-/*#logo .fa
+.logo .fa
 {
 	color: #8dc63f;
 }
 
-#logo .fa:after
+.logo .fa:after
 {
 	position: absolute;
 	display: inline-block;
 	padding-right: 2em;
-}*/
+}
 
 /*********************************************************************************/
 /* Menu                                                                          */
@@ -442,13 +430,39 @@ article
 
 .menu
 {
+	position: absolute;
 	right: 0;
 	top: 1.6em;
-	color: #FFF;
-
 }
 
-.menu .menu__color
+.menu ul
+{
+	display: inline-block;
+}
+
+.menu li
+{
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+.menu li a, .menu li span
+{
+	display: inline-block;
+	margin-left: 1px;
+	padding: 1em 1.5em 0em 1.5em;
+	letter-spacing: 0.10em;
+	text-decoration: none;
+	font-size: 1em;
+	text-transform: uppercase;
+	outline: 0;
+	color: #FFF;
+}
+
+
+
+.menu .current_page_item a
 {
 	color: #8dc63f;
 }
@@ -458,7 +472,7 @@ article
 /*********************************************************************************/
 	
 
-.header-featured
+	.header-featured
 	{
 		padding: 10em 0em;
 		background-image: url(images/banner.jpg);
@@ -466,22 +480,30 @@ article
 		background-size: cover;
 	}
 
+
+
+.banner-wrapper
+{
+}
+
 .banner
 {
 	overflow: hidden;
+	width: 1000px;
 	text-align: center;
 	color: rgba(255,255,255,.7);
 	font-size: 1.5em;
 }
 
-.banner .banner__a
+.banner a
 {
 	color: rgba(255,255,255,.9);
 }
 
-.banner .banner__h2
+.banner h2
 {
 	padding-bottom: 0.50em;
+	font-weight: 400;
 	font-size: 3em;
 	color: #FFF;
 }
@@ -510,8 +532,12 @@ article
 /* Page                                                                          */
 /*********************************************************************************/
 
+.wrapper
+{
+	background: #FFF;
+}
 
-#page
+.page
 {
 	overflow: hidden;
 	padding: 6em 0em;
@@ -519,7 +545,7 @@ article
 	text-align: center;
 }
 
-#page .button
+.page .button
 {
 	margin-top: 2em;
 }
@@ -612,25 +638,19 @@ article
 .featured
 {
 	overflow: hidden;
-	display: flex;
-	flex: 200px;
-    flex-direction: row;
-	flex-wrap: wrap;
-	
-	
 }
 
-.main-title
+.featured .main-title
 {
 	margin-bottom: 4em;
 }
 
-.main-title h2
+.featured .main-title h2
 {
 	font-size: 4em;
 }
 
-.main-title .byline
+.featured .main-title .byline
 {
 	font-size: 2em;
 }
@@ -648,6 +668,26 @@ article
 	border-radius: 50%;
 }
 
+.column1,  .column2,  .column3,  .column4
+{
+	width: 282px;
+}
+
+.column1,  .column2
+{
+	float: left;
+	margin-right: 24px;
+}
+
+.column3
+{
+	float: left;
+}
+
+.column4
+{
+	float: right;
+}
 
 #slider-wrapper
 {
@@ -824,7 +864,7 @@ article
 	margin-top: 2em;
 }
 
-/*#extra
+#extra
 {
 	overflow: hidden;
 	margin: 5em auto 2em auto;
@@ -879,13 +919,20 @@ article
 	font-size: 0.80em;
 }
 
-
+.extra2 .ebox1,
+.extra2 .ebox2
+{
+	width: 560px;
+}
 
 .extra2  .ebox1
 {
-
+	float: left;
 	padding-right: 40px;
 	border-right: 1px solid rgba(0,0,0,.1);
 }
 
-*/
+.extra2 .ebox2
+{
+	float: right;
+}
