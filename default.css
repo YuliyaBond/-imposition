@@ -57,6 +57,7 @@ a:hover
 {
 	margin: 0px auto;
 	width: 1200px;
+	
 }
 
 /*********************************************************************************/
@@ -367,12 +368,15 @@ ul.contact li a.icon-rss:before
 .header-wrapper
 {
 	background: #2b2b2b;
+	display: flex;
+	flex-direction: column;
 }
 
 .header
 {
 	position: relative;
 	height: 100px;
+	display: flex;
 }
 
 /*********************************************************************************/
@@ -381,7 +385,8 @@ ul.contact li a.icon-rss:before
 
 .logo
 {
-	position: absolute;
+	display: flex;
+	align-items: center;
 	top: 2em;
 	width: 100%;
 }
@@ -430,7 +435,7 @@ ul.contact li a.icon-rss:before
 
 .menu
 {
-	position: absolute;
+	display: flex;
 	right: 0;
 	top: 1.6em;
 }
@@ -535,6 +540,8 @@ ul.contact li a.icon-rss:before
 .wrapper
 {
 	background: #FFF;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .page
@@ -563,7 +570,7 @@ ul.contact li a.icon-rss:before
 /* Sidebar                                                                       */
 /*********************************************************************************/
 
-	#sidebar
+/*	#sidebar
 {
 	float: right;
 	width: 450px;
@@ -633,6 +640,8 @@ ul.contact li a.icon-rss:before
 	padding: 10em 0em;
 	background: #FFF;
 	text-align: center;
+	display: flex;
+	 flex-direction: row;
 }
 
 .featured
@@ -668,7 +677,7 @@ ul.contact li a.icon-rss:before
 	border-radius: 50%;
 }
 
-.column1,  .column2,  .column3,  .column4
+/*.column1,  .column2,  .column3,  .column4
 {
 	width: 282px;
 }
@@ -814,11 +823,11 @@ ul.contact li a.icon-rss:before
 	background: #505050;
 	border-top: solid 1px #505050;
 }
-
+*/
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
-
+/*
 #footer-wrapper
 {
 	overflow: hidden;
@@ -890,7 +899,7 @@ ul.contact li a.icon-rss:before
 	color: #A2A2A2;
 }
 
-
+*/
 .extra2
 {
 }
@@ -914,7 +923,7 @@ ul.contact li a.icon-rss:before
 	font-size: 2em;
 }
 
-.extra2 .title .byline
+.extra2 .title .bylinea
 {
 	font-size: 0.80em;
 }
@@ -927,12 +936,13 @@ ul.contact li a.icon-rss:before
 
 .extra2  .ebox1
 {
-	float: left;
+	/*float: left;*/
 	padding-right: 40px;
 	border-right: 1px solid rgba(0,0,0,.1);
 }
 
 .extra2 .ebox2
 {
-	float: right;
+	margin: 1.5em;
+	/*float: right;*/
 }
