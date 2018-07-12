@@ -1,4 +1,7 @@
 
+* {
+	box-sizing: border-box;
+}
 html, body
 {
 	height: 100%;
@@ -538,7 +541,8 @@ ul.contact li a.icon-rss:before
 {
 	background: #FFF;
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
 }
 
 .page
@@ -636,9 +640,6 @@ ul.contact li a.icon-rss:before
 	overflow: hidden;
 	padding: 10em 0em;
 	background: #FFF;
-	text-align: center;
-	display: flex;
-	 flex-direction: row;
 }
 
 .featured
@@ -649,6 +650,7 @@ ul.contact li a.icon-rss:before
 .featured .main-title
 {
 	margin-bottom: 4em;
+  flex: 1 1 100%;
 }
 
 .featured .main-title h2
@@ -908,6 +910,8 @@ ul.contact li a.icon-rss:before
 	margin-bottom: 5em;
 	padding-bottom: 5em;
 	border-bottom: 1px solid rgba(0,0,0,.1);
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .extra2 .button
@@ -928,7 +932,9 @@ ul.contact li a.icon-rss:before
 .extra2 .ebox1,
 .extra2 .ebox2
 {
-	width: 560px;
+  padding: 1.5em;
+	margin-bottom: 1.5em;
+	/* width: 560px; */
 }
 
 .extra2  .ebox1
@@ -936,10 +942,12 @@ ul.contact li a.icon-rss:before
 	/*float: left;*/
 	padding-right: 40px;
 	border-right: 1px solid rgba(0,0,0,.1);
+  flex: 0 0 50%;
 }
 
 .extra2 .ebox2
 {
-	margin: 1.5em;
+	/* margin: 1.5em; */
+  flex: 0 0 50%;
 	/*float: right;*/
 }
