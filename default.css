@@ -83,11 +83,11 @@ a:hover
 .header
 {
 	display: flex;
-	flex-direction: column;
-	height: 100px;
-	background: #2b2b2b;
+	/*flex-direction: column;*/
 	justify-content: space-between;
 	align-items: center;
+	height: 100px;
+	background: #2b2b2b;
 }
 
 /*********************************************************************************/
@@ -96,19 +96,15 @@ a:hover
 
 .logo
 {
-	position: absolute;
 	top: 2em;
 	width: 100%;
-}
-
-.logo h1
-{
 	font-size: 2.5em;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #ED7070;
 	padding-right: 0.50em;
 	border-right: 1px solid rgba(0,0,0,.1);
+	padding: 2em;
 }
 
 .logo span
@@ -250,6 +246,8 @@ nav a, nav span
 	padding-bottom: 5em;
 	display: flex; 
     flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .content h2
@@ -283,13 +281,28 @@ nav a, nav span
 	flex: 0 0 50%;
 }
 
-.right
+.cell
 {
 	padding: 1.5em;
 	margin-bottom: 1.5em;
-	flex: 0 0 50%;	
+	flex: 0 0 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
+.cell--border
+{
+    border-right: 1px solid rgba(0,0,0,.1);	
+}
+
+.center
+{
+	flex: 1 1 100%;
+	margin-bottom: 1.5em;
+	text-align: center;
+}
 
 
 .separate-box {
@@ -297,4 +310,40 @@ nav a, nav span
 	margin-bottom: 1.5em;
 }
 
+/*************************************************************************/
+/* media quary                                                           */
+/*************************************************************************/
 
+@media screen and (max-width: 768px) {
+	.content {
+		display: inline-block;
+	}
+	
+	.cell--border{
+		border-bottom: 1px solid rgba(0,0,0,.1);
+	}
+	
+	.banner {
+		padding: 5% 5%;
+		font-size: 1em;
+	}
+	
+	.button{
+		padding: 2% 2%;
+		font-size: 1em;
+	}
+	
+	.banner .button {
+    margin-top: 2%;
+	}
+}
+
+@media screen and (min-width: 1100px) {
+	.cell{
+		flex: 0 0 280px;
+	}
+	
+	.separate-box {
+		display: none;
+	}
+}
